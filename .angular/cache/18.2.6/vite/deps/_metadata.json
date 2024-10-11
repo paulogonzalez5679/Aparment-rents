@@ -1,25 +1,25 @@
 {
-  "hash": "9d4ed125",
-  "configHash": "54e542b2",
+  "hash": "b22d5404",
+  "configHash": "c81e9164",
   "lockfileHash": "70dd62a6",
-  "browserHash": "a3b5da15",
+  "browserHash": "8956714a",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "b485fd89",
+      "fileHash": "b070e812",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "dfb7e550",
+      "fileHash": "cbc53b09",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "c93fb1b8",
+      "fileHash": "f76e169f",
       "needsInterop": false
     }
   },
