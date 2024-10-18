@@ -84,7 +84,6 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     <!-- .site-mobile-menu -->
-
     <div
       class="site-blocks-cover inner-page-cover overlay"
       style="background-image: url('images/hero_bg_1.jpg')"
@@ -105,55 +104,12 @@
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="featured-property-half d-flex">
-        <div
-          class="image"
-          style="background-image: url('images/departamento1/IMG_8449.JPG')"
-        ></div>
-        <div class="text">
-          <h2>Property Information</h2>
-          <p class="mb-5">
-            Enjoy a stylish experience at this centrally-located Condo at the
-            Well known hotel YotelPad. Our STUDIO home features beautiful ocean
-            view as well as the city. Enjoy walking in downtown. Steps away from
-            restaurants. Couple minutes drive from Brickell. 10min drive to
-            Miami Beach. The building offers Pool,Gym, Hot tub,restaurant, lots
-            of workspaces. The Studio has kitchen, washing and dryer, fridge,
-            coffee machine, oven and dish washer. The building has opened in
-            2022. Everything is brand NEW! The STUDIO has kitchen, washing and
-            dryer, fridge, coffee machine, oven and dish washer. The building
-            has opened in 2022. Everything is brand NEW! The trash room is
-            located in the same floor. You will have the entire condo STUDIO for
-            yourself. You will have an access to pool, fitness and restaurant
-            spaces. Very cool building! You can reach me anytime. will be happy
-            to help you out! The neighborhood is beautiful with restaurants and
-            walking distance to bayside, Kaseya center Arena Frost museum of
-            science. Access to free metro mover. Easy walking to restaurants and
-            shops. 10 min drive to Miami beach 5 min to brickell. 10 min to
-            wynwood/design district. Train station (free) Parking available 15$
-            per night next to the building.
-          </p>
-          <ul class="property-list-details mb-5">
-            <li>Room: <strong>1</strong></li>
-            <li>Bathroom: <strong>1</strong></li>
-            <li>Guess: <strong>3</strong></li>
-          </ul>
-          <p>
-            <a href="contact.html" class="btn btn-primary px-4 py-3"
-              >Send Inquiry</a
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-
+    <!-- Inicia Detalles -->
+    <br/>
     <div class="amenitiesBody">
       <div class="row" style="max-width: 100%">
-        <div class="col-lg-2 col-md-12"></div>
         <!-- House Rules -->
-        <div class="col-lg-5 col-md-12">
+        <div class="col-lg-4 col-md-12">
           <div class="amenitiesBody">
             <div class="amenities">
               <h2>House Rules</h2>
@@ -259,7 +215,7 @@
           </div>
         </div>
         <!-- Amenities -->
-        <div class="col-lg-3 col-md-12">
+        <div class="col-lg-4 col-md-12">
           <div class="amenitiesBody amenties-margin">
             <div class="amenities amenties-with">
               <h2>Amenities</h2>
@@ -423,15 +379,9 @@
 
           </div>
         </div>
-    </div>
-
-    <div class="amenitiesBody">
-      <div class="row" style="max-width: 100%">
-        <div class="col-lg-2 col-md-12"></div>
-        <!-- Politicas -->
-        <div class="col-lg-5 col-md-12">
-          <div class="amenitiesBody">
-            <div class="amenities-policy">
+        <div class="col-lg-4 col-md-12">
+          <div class="amenitiesBody amenties-margin">
+            <div class="amenities amenties-with">
               <h2>Cancellation Policy</h2>
               <br />
               <div class="row">
@@ -447,9 +397,75 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<!-- Fin detalles -->
+
+
+<div class="container">
+  <div class="featured-property-half d-flex">
+    <div
+      class="image"
+      style="background-image: url('images/departamento1/IMG_8449.JPG')"
+    ></div>
+    <div class="text">
+      <h2>Property Information</h2>
+      <p class="mb-5">
+        <span id="property-short">
+          Enjoy a stylish experience at this centrally-located Condo at the Well
+          known hotel YotelPad. Our STUDIO home features beautiful ocean view as
+          well as the city. Enjoy walking in downtown. Steps away from restaurants.
+          Couple minutes drive from Brickell. 10min drive to Miami Beach.
+        </span>
+        <span id="property-more" style="display: none;">
+          The building offers Pool, Gym, Hot tub, restaurant, lots of workspaces.
+          The Studio has kitchen, washing and dryer, fridge, coffee machine, oven
+          and dish washer. The building has opened in 2022. Everything is brand NEW!
+          The trash room is located on the same floor. You will have the entire condo
+          STUDIO for yourself. You will have access to pool, fitness, and restaurant
+          spaces. Very cool building! You can reach me anytime, I will be happy to
+          help you out! The neighborhood is beautiful with restaurants and walking
+          distance to bayside, Kaseya Center Arena, Frost Museum of Science. Access
+          to free metro mover. Easy walking to restaurants and shops. 10 min drive
+          to Miami Beach, 5 min to Brickell, 10 min to Wynwood/Design District. Train
+          station (free) and parking available for $15 per night next to the building.
+        </span>
+      </p>
+      <button onclick="toggleProperty()" id="read-more-btn" class="btn btn-primary mb-4">Read More</button>
+      <ul class="property-list-details mb-5">
+        <li>Address: <strong>227 NE 2nd St, Miami, FL 33132</strong></li>
+        <li>Room: <strong>1</strong></li>
+        <li>Bathroom: <strong>1</strong></li>
+        <li>Guests: <strong>3</strong></li>
+      </ul>
+      <p>
+        <a href="contact.html" class="btn btn-primary px-4 py-3">Send Inquiry</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleProperty() {
+    var moreText = document.getElementById("property-more");
+    var btnText = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
 
 
 
@@ -528,251 +544,169 @@
       </div>
     </div>
 
-        <!-- Modal Rules -->
-        <div
-        class="modal fade"
-        id="rulesModal"
-        tabindex="-1"
-        aria-labelledby="rulesLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="rulesLabel">
-                Rules
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h6>1. No loud music & no more than 2 guests allowed. QUIET HOURS: After 10 pm</h6> <br/>
-              <h6>2. No pets allowed. A cleaning fee of up to $150 will be charged for violation of policy.</h6> <br/>
-              <h6>3. PLEASE NO SMOKING. No smoking is allowed in the room. A cleaning fee up to $350 per day will be charged for violation of policy. You can use the balcony to smoke ONLY</h6> <br/>
-              <h6>4. Please take out trash prior to check-out. Trash Shute is on the same floor on the far opposite side.</h6> <br/>
-              <h6>5. If you wear make up, please DO NOT use the WHITE towels. Please do not leave make- up on the towels, sheets/ walls or stains (100$ penalty). There will be a fee $150 if stains and make-up is found anywhere in the house</h6> <br/>
-              <h6>6. If you spill something, please DO NOT use the towels or rags to clean up any mess. There's paper towels there for your use.</h6> <br/>
-              <h6>7. Dishes must be cleaned</h6> <br/>
-              <h5>***If you violate the house rules with loud music or house party, a violation of $350 will be charged and you will be asked to leave***</h5>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal">
-                Close
-              </button>
-            </div>
+      <!-- Modal Rules -->
+    <div
+      class="modal fade"
+      id="rulesModal"
+      tabindex="-1"
+      aria-labelledby="rulesLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="rulesLabel">
+              Rules
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
-      </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div
-            class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
-          >
-            <h2 class="mb-5">See the apartment</h2>
+          <div class="modal-body">
+            <h6>1. No loud music & no more than 2 guests allowed. QUIET HOURS: After 10 pm</h6> <br/>
+            <h6>2. No pets allowed. A cleaning fee of up to $150 will be charged for violation of policy.</h6> <br/>
+            <h6>3. PLEASE NO SMOKING. No smoking is allowed in the room. A cleaning fee up to $350 per day will be charged for violation of policy. You can use the balcony to smoke ONLY</h6> <br/>
+            <h6>4. Please take out trash prior to check-out. Trash Shute is on the same floor on the far opposite side.</h6> <br/>
+            <h6>5. If you wear make up, please DO NOT use the WHITE towels. Please do not leave make- up on the towels, sheets/ walls or stains (100$ penalty). There will be a fee $150 if stains and make-up is found anywhere in the house</h6> <br/>
+            <h6>6. If you spill something, please DO NOT use the towels or rags to clean up any mess. There's paper towels there for your use.</h6> <br/>
+            <h6>7. Dishes must be cleaned</h6> <br/>
+            <h5>***If you violate the house rules with loud music or house party, a violation of $350 will be charged and you will be asked to leave***</h5>
           </div>
-        </div>
-        <div class="row">
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8451.JPG');
-                "
-              ></div>
-              <div class="unit-9-content">
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8453.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8455.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8457.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8459.JPG');
-                "
-              ></div>
-              <div class="unit-9-content">
-                <!-- <span>with Wendy Matos</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8461.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8463.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8465.JPG');
-                "
-              ></div>
-              <div class="unit-9-content"></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8465.JPG');
-                "
-              ></div>
-            </a>
-          </div>
-
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8467.JPG');
-                "
-              ></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8469.JPG');
-                "
-              ></div>
-            </a>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-5"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <a href="#" class="unit-9">
-              <div
-                class="image"
-                style="
-                  background-image: url('images/departamento1/IMG_8471.JPG');
-                "
-              ></div>
-            </a>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-dismiss="modal">
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+          <h2 class="mb-5">See the apartment</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Image 1 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8451.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8451.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8453.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8453.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8455.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8455.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="400">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8457.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8457.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8459.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8459.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8461.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8461.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8463.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8463.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="400">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8465.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8465.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8467.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8467.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8469.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8469.JPG');"></div>
+          </a>
+        </div>
+
+        <!-- Image 11 -->
+        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="unit-9" onclick="openModal('images/departamento1/IMG_8471.JPG')">
+            <div class="image" style="background-image: url('images/departamento1/IMG_8471.JPG');"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Preview apartment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Apartment" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      // Set the image source in the modal
+      document.getElementById("modalImage").src = imageSrc;
+      // Show the modal
+      $('#imageModal').modal('show');
+    }
+  </script>
+
 
     <div class="bg-primary" data-aos="fade">
       <div class="container">
@@ -785,13 +719,15 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">About Apart</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-                pariatur reprehenderit vero atque, consequatur id ratione, et
-                non dignissimos culpa? Ut veritatis, quos illum totam quis
-                blanditiis, minima minus odio!
+              <h3 class="footer-heading mb-4">About AMJ Rent</h3>
+              <p id="about-short">
+                At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
               </p>
+              <p id="about-more" style="display: none;">
+                We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
+              </p>
+
+              <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
             </div>
           </div>
           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -821,6 +757,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleAbout() {
+        var moreText = document.getElementById("about-more");
+        var btnText = document.getElementById("read-more-btn");
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "inline";
+          btnText.innerHTML = "Read Less";
+        } else {
+          moreText.style.display = "none";
+          btnText.innerHTML = "Read More";
+        }
+      }
+    </script>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

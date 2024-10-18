@@ -29,12 +29,7 @@
   border-radius: 8px;
   width: 80%;
 }
-.amenties-with{
-  width: 100%
-}
-.amenties-margin{
-  margin-right: 50px
-}
+
 .amenities-policy {
   max-width: 800px;
   margin: 20px auto;
@@ -45,17 +40,9 @@
   width: 80%;
   margin-left: 75px;
 }
-@media (max-width: 767px) {
-  .amenities-policy {
-      margin-left: 30px;
-  }
-  .amenties-with{
-    width: 80%
-  }
-  .amenties-margin{
-    margin-right: 0px
-  }
-}
+
+
+
 .h2amenities {
   font-size: 24px;
   font-weight: bold;

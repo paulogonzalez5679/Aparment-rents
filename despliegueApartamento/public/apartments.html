@@ -36,7 +36,9 @@
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-              <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Apart<span class="text-primary">.</span></strong></a></h1>
+              <a href="index.html">
+                  <img src="images/logoFinalApartamento.png" width="50%" alt="Logo" class="img-fluid" />
+              </a>
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -76,7 +78,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
           <h1 class="text-white">Apartments</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>We present you the best option for your stay</p>
         </div>
       </div>
     </div>
@@ -186,7 +188,14 @@
         <div class="row">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
             <h2 class="mb-5">Our Apartments</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+            <p>
+              Each of our available apartments has been carefully selected for its modern and elegant design. Featuring high-quality finishes,
+              bright spaces, and layouts designed for comfort, we offer options
+              that seamlessly blend luxury and functionality.
+              These apartments are not just places to live,
+              but a sophisticated lifestyle, where every detail is
+              crafted to provide you with a unique living experience.
+            </p>
           </div>
         </div>
 
@@ -195,7 +204,7 @@
           <a href="apartment-detail1.html" class="col1 unit-9 no-height" data-aos="fade-up" data-aos-delay="100">
             <div class="image" style="background-image: url('images/departamento1/IMG_8453.JPG');"></div>
             <div class="unit-9-content">
-              <h2>Baltimore Apartment</h2>
+              <h2>Condo In Downtown - Miami</h2>
               <span>$600/night</span>
             </div>
           </a>
@@ -205,7 +214,7 @@
             <a href="apartment-detail2.html" class="col2-row1 unit-9 no-height" data-aos="fade-up" data-aos-delay="200">
               <div class="image" style="background-image: url('images/departamento2/IMG_8588.JPG');"></div>
               <div class="unit-9-content">
-                <h2>Austin Apartment</h2>
+                <h2>Condo In Downtown - Miami</h2>
                 <span>$290/night</span>
               </div>
             </a>
@@ -213,7 +222,7 @@
             <a href="apartment-detail3.html" class="col2-row2 unit-9 no-height" data-aos="fade-up" data-aos-delay="300">
               <div class="image" style="background-image: url('images/departamento3/IMG_8606.JPG');"></div>
               <div class="unit-9-content">
-                <h2>Atlanta Apartment</h2>
+                <h2>Condo In Downtown - Miami</h2>
                 <span>$1,290/night</span>
               </div>
             </a>
@@ -225,7 +234,7 @@
       </div>
     </div>
 
-
+<!--
     <div class="site-section block-13">
       <div class="container" data-aos="fade-up">
         <div class="row">
@@ -298,7 +307,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -315,22 +324,22 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">About Apart</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+              <h3 class="footer-heading mb-4">About AMJ Rent</h3>
+              <p id="about-short">
+                At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
+              </p>
+              <p id="about-more" style="display: none;">
+                We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
+              </p>
+
+              <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
             </div>
           </div>
-
-
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="mb-5">
-
-
-              <div class="block-16">
-              </div>
-
+              <div class="block-16"></div>
             </div>
           </div>
-
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
               <div class="col-md-12">
@@ -340,16 +349,12 @@
                 <ul class="list-unstyled">
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Apartments</a></li>
-
-
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
-
                   <li><a href="#">Contact Us</a></li>
-
                 </ul>
               </div>
             </div>
@@ -357,6 +362,21 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleAbout() {
+        var moreText = document.getElementById("about-more");
+        var btnText = document.getElementById("read-more-btn");
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "inline";
+          btnText.innerHTML = "Read Less";
+        } else {
+          moreText.style.display = "none";
+          btnText.innerHTML = "Read More";
+        }
+      }
+    </script>
 
   </div>
 
