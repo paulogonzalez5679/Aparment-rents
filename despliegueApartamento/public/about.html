@@ -78,7 +78,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
           <h1 class="text-white">About Us</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Discover our available apartments and find the perfect space to start your new life.</p>
         </div>
       </div>
     </div>
@@ -92,16 +92,38 @@
         </div>
         <div class="col-lg-6">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-          <h2 class="mb-5">Our Office</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-            officia, error reiciendis ab quod?</p>
-        </div>
+            <h2 class="mb-12">Our Office</h2>
+            <p>
+              At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
+              <span id="moreText" style="display:none;">
+                We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
+              </span>
+            </p>
+            <button class="read-more btn btn-primary" onclick="toggleReadMore()" style="margin: 10px 0; cursor: pointer;">Read more</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-    <div class="site-section block-13 bg-light">
+  <script>
+    function toggleReadMore() {
+      const moreText = document.getElementById("moreText");
+      const readMoreButton = document.querySelector(".read-more");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        readMoreButton.innerText = "Read less"; // Change button text to "Read less"
+      } else {
+        moreText.style.display = "none";
+        readMoreButton.innerText = "Read more"; // Change button text to "Read more"
+      }
+    }
+  </script>
+
+
+
+    <!-- <div class="site-section block-13 bg-light">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
@@ -173,7 +195,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -213,14 +235,14 @@
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Apartments</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="apartments.html">Apartments</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
