@@ -1571,9 +1571,10 @@ a {
 
 .padded-multi-line-primary, .unit-9 h2 {
   display: inline;
-  background: #e3c4a8;
-  -webkit-box-shadow: 10px 0 0 #e3c4a8, 0px 0 0 #e3c4a8;
-  box-shadow: 10px 0 0 #e3c4a8, 0px 0 0 #e3c4a8; }
+  /* background: #e3c4a8; */
+  /* -webkit-box-shadow: 10px 0 0 #e3c4a8, 0px 0 0 #e3c4a8;
+  box-shadow: 10px 0 0 #e3c4a8, 0px 0 0 #e3c4a8;  */
+}
 
 .padded-multi-line-black, .unit-9 span {
   display: inline;
@@ -1839,6 +1840,8 @@ figure figcaption {
           background: #e3c4a8; }
 
 .featured-property-half {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   background: #fff;
   margin-top: -100px;
@@ -1876,5 +1879,44 @@ figure figcaption {
 
     .featured-property-half .text {
       padding: 20px; /* Reduce el padding para que se ajuste mejor en pantallas pequeñas */
+    }
+  }
+
+  .image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35rem; /* Altura fija para la imagen */
+    /* margin-top: 7rem;
+    margin-left: 3rem; */
+  }
+  .image2 {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35rem; /* Altura fija para la imagen */
+    margin-top: 7rem;
+    margin-left: 3rem;
+  }
+
+  .text {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; /* Evita que el texto desborde */
+  }
+
+  @media (max-width: 768px) {
+    .featured-property-half {
+      flex-direction: column;
+    }
+
+    .image {
+      height: 200px; /* Ajusta la altura para dispositivos más pequeños */
+    }
+    .image2 {
+      height: 200px; /* Ajusta la altura para dispositivos más pequeños */
     }
   }
