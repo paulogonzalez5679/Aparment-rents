@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   </head>
   <body>
@@ -176,6 +178,21 @@
       </div>
     </div>
 
+    <!-- MAPA LEAFLET -->
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mb-4">
+        <h2>Location Map</h2>
+      </div>
+      <div class="col-md-12">
+        <div id="map" style="height: 500px; width: 100%; border-radius: 10px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -252,6 +269,30 @@
   <script src="js/circleaudioplayer.js"></script>
 
   <script src="js/main.js"></script>
+  <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+<script>
+  // Coordenadas ejemplo: Miami (puedes cambiarlas)
+  var map = L.map('map').setView([25.776346679481417, -80.18969948004978], 16);
+
+  // Capa base de OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Marcador de ejemplo
+  L.marker([25.776346679481417, -80.18969948004978]).addTo(map)
+    .bindPopup('227 NE 2nd St, Miami, FL 33132')
+    .openPopup();
+</script>
+  <script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+      duration: 800, // Duration of animations
+      easing: 'ease-in-out', // Easing function
+      once: true // Whether animation should happen only once - while scrolling down
+    });
+  </script>
   </body>
 </html>
