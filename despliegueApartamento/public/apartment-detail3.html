@@ -21,10 +21,13 @@
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
   <link rel="stylesheet" href="css/fl-bigmug-line.css" />
-
   <link rel="stylesheet" href="css/aos.css" />
-
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -587,6 +590,27 @@
       </div>
     </div>
 
+
+    <!-- MAPA LEAFLET -->
+    <div>
+      <div class="row">
+        <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+          <h2 >Location map</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12">
+            <div id="map" style="height: 500px; width: 100%; border-radius: 10px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  <!-- END MAPA LEAFLET -->
+
+
     <div class="row" style="width: 100%;">
         <div class="col-4">
 
@@ -633,82 +657,134 @@
         <div class="row" style="height: 3rem"></div>
       </div>
     </div>
+</body>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="mb-5">
-              <h3 class="footer-heading mb-4">About AMJ Rent</h3>
-              <p id="about-short">
-                At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
-              </p>
-              <p id="about-more" style="display: none;">
-                We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
-              </p>
 
-              <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
-            </div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="mb-5">
+          <h3 class="footer-heading mb-4">About AMJ Rent</h3>
+          <p id="about-short">
+            At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
+          </p>
+          <p id="about-more" style="display: none;">
+            We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
+          </p>
+
+          <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-lg-0">
+        <div class="">
+          <div class="block-16"></div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-lg-0">
+        <div class="row ">
+          <div class="col-md-12">
+            <h3 class="footer-heading mb-4">Navigations</h3>
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="mb-5">
-              <div class="block-16"></div>
-            </div>
+          <div class="col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="apartments.html">Apartments</a></li>
+            </ul>
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Navigations</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="apartments.html">Apartments</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
 
-    <script>
-      function toggleAbout() {
-        var moreText = document.getElementById("about-more");
-        var btnText = document.getElementById("read-more-btn");
-
-        if (moreText.style.display === "none") {
-          moreText.style.display = "inline";
-          btnText.innerHTML = "Read Less";
-        } else {
-          moreText.style.display = "none";
-          btnText.innerHTML = "Read More";
-        }
-      }
-    </script>
-
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mediaelement-and-player.min.js"></script>
-    <!-- <script src="js/jquery.stellar.min.js"></script> -->
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/circleaudioplayer.js"></script>
-
-    <script src="js/main.js"></script>
-</body>
 
 </html>
+
+
+<!-- SCRIPTS -->
+
+<script>
+  function toggleAbout() {
+    var moreText = document.getElementById("about-more");
+    var btnText = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
+
+<script>
+  function openModal(imageSrc) {
+    // Set the image source in the modal
+    document.getElementById("modalImage").src = imageSrc;
+    // Show the modal
+    $('#imageModal').modal('show');
+  }
+</script>
+
+<!-- MAPA DE UBICACION -->
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Coordenadas ejemplo: Miami (puedes cambiarlas)
+  var map = L.map('map').setView([25.776346679481417, -80.18969948004978], 16);
+
+  // Capa base de OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Marcador de ejemplo
+  L.marker([25.776346679481417, -80.18969948004978]).addTo(map)
+    .bindPopup('227 NE 2nd St, Miami, FL 33132')
+    .openPopup();
+</script>
+<script>
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800, // Duration of animations
+    easing: 'ease-in-out', // Easing function
+    once: true // Whether animation should happen only once - while scrolling down
+  });
+</script>
+<script>
+  function toggleProperty() {
+    var moreText = document.getElementById("property-more");
+    var btnText = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/circleaudioplayer.js"></script>
+<script src="js/main.js"></script>

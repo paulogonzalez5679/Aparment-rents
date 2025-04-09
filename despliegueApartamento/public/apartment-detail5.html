@@ -21,9 +21,11 @@
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
   <link rel="stylesheet" href="css/fl-bigmug-line.css" />
-
   <link rel="stylesheet" href="css/aos.css" />
-
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/aos.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -51,7 +53,6 @@
                 <li class="active">
                   <a href="apartments.html">Apartments</a>
                 </li>
-
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
@@ -341,16 +342,11 @@
             </span>
             <span id="property-more" style="display: none;">
               Please look out for the check in instructions, you will have to use a virtual key to move around the building.
-
               Parking available 15$ per night next to the building.
-
               The property uses a virtual key to lock & unlock the door from your phone. You just download the app before your arrival using the link in the email we'll send once you've booked. The app allows you to activate your digital key with the reference number also provided in that email.
-
               PET POLICY:
               - Pets are not allowed
-
               HOUSE RULES:
-
               - No smoking of any kind is allowed on the premises. Smoking tobacco, cannabis, or the use of any recreational drugs in the house is strictly prohibited. Failure to comply will incur a $400 penalty and an additional $150 cleaning fee.
               - No parties or events are permitted, illegal activity is prohibited, and excessive noise won't be tolerated. No loud music is allowed after 10 pm. Please be respectful of the neighbors
               - No more guests than those listed in your reservation are allowed
@@ -369,31 +365,11 @@
             <li>Guests: <strong>4</strong></li>
           </ul>
           <p>
-           <a href="https://wa.me/593963330177?text=Hello!%20I%20would%20like%20more%20information%20to%20book%20the%20Downtown%20Luxury%20Studio%20Pool%2FGym." target="_blank">Send Inquiry</a>
-
+          <a href="https://wa.me/593963330177?text=Hello!%20I%20would%20like%20more%20information%20to%20book%20the%20Downtown%20Luxury%20Studio%20Pool%2FGym." target="_blank">Send Inquiry</a>
           </p>
         </div>
       </div>
     </div>
-
-    <script>
-      function toggleProperty() {
-        var moreText = document.getElementById("property-more");
-        var btnText = document.getElementById("read-more-btn");
-
-        if (moreText.style.display === "none") {
-          moreText.style.display = "inline";
-          btnText.innerHTML = "Read Less";
-        } else {
-          moreText.style.display = "none";
-          btnText.innerHTML = "Read More";
-        }
-      }
-    </script>
-
-
-
-
     <!-- Modal Amenities -->
     <div class="modal fade" id="amenitiesModal" tabindex="-1" aria-labelledby="amenitiesModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -440,7 +416,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal Rules -->
     <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -477,10 +452,6 @@
         </div>
       </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <div class="site-section">
       <div class="container">
@@ -563,20 +534,37 @@
       </div>
     </div>
 
-    <div class="row" style="width: 100%;">
-        <div class="col-4">
-
-        </div>
-        <div class="col-4">
-          <div class="row">
-           <a href="https://wa.me/593963330177?text=Hello!%20I%20would%20like%20more%20information%20to%20book%20the%20Downtown%20Luxury%20Studio%20Pool%2FGym." target="_blank">Send Inquiry</a>
-
-          </div>
-        </div>
-        <div class="col-4">
-        </div>
+  <!-- MAPA LEAFLET -->
+  <div>
+    <div class="row">
+      <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+        <h2 >Location map</h2>
+      </div>
     </div>
-    <br/><br/><br/>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12">
+          <div id="map" style="height: 500px; width: 100%; border-radius: 10px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <!-- END MAPA LEAFLET -->
+
+  <div class="row" style="width: 100%;">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <a href="https://wa.me/593963330177?text=Hello%21%20I%20would%20like%20more%20information%20to%20book%20the%20UPSCale%20OCEAN%20VIEW%20STUDIO%20POOL%2FGYM." target="_blank" class="btn btn-primary px-4 py-3">Send Inquiry</a>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+</div>
+<br/><br/><br/>
     <!-- Modal Structure -->
     <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -593,99 +581,139 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function openModal(imageSrc) {
-        // Set the image source in the modal
-        document.getElementById("modalImage").src = imageSrc;
-        // Show the modal
-        $('#imageModal').modal('show');
-      }
-    </script>
-
-
-
     <div class="bg-primary" data-aos="fade">
       <div class="container">
         <div class="row" style="height: 3rem"></div>
       </div>
     </div>
+</body>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="mb-5">
-              <h3 class="footer-heading mb-4">About AMJ Rent</h3>
-              <p id="about-short">
-                At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
-              </p>
-              <p id="about-more" style="display: none;">
-                We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
-              </p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="mb-5">
+            <h3 class="footer-heading mb-4">About AMJ Rent</h3>
+            <p id="about-short">
+              At AMJ Rent, we are dedicated to helping you find the perfect space to call home. With years of experience in the rental market, we specialize in offering high-quality apartments that combine style, comfort, and convenience. Our team works tirelessly to curate a selection of properties that meet the highest standards, ensuring that each one reflects the modern, elegant lifestyle you deserve.
+            </p>
+            <p id="about-more" style="display: none;">
+              We believe that finding your ideal apartment should be a seamless and enjoyable process, which is why we prioritize personalized service, transparency, and a hassle-free experience from start to finish. Whether you’re looking for a cozy retreat or a sophisticated urban dwelling, AMJ Rent is here to guide you every step of the way.
+            </p>
 
-              <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
-            </div>
+            <button onclick="toggleAbout()"  class="btn btn-primary px-4 py-3"id="read-more-btn">Read More</button>
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="mb-5">
-              <div class="block-16"></div>
-            </div>
+        </div>
+        <div class="col-lg-4 mb-lg-0">
+          <div class="">
+            <div class="block-16"></div>
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Navigations</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="apartments.html">Apartments</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-              </div>
+        </div>
+        <div class="col-lg-4 mb-lg-0">
+          <div class="row ">
+            <div class="col-md-12">
+              <h3 class="footer-heading mb-4">Navigations</h3>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apartments.html">Apartments</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <ul class="list-unstyled">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-
-    <script>
-      function toggleAbout() {
-        var moreText = document.getElementById("about-more");
-        var btnText = document.getElementById("read-more-btn");
-
-        if (moreText.style.display === "none") {
-          moreText.style.display = "inline";
-          btnText.innerHTML = "Read Less";
-        } else {
-          moreText.style.display = "none";
-          btnText.innerHTML = "Read More";
-        }
-      }
-    </script>
-
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mediaelement-and-player.min.js"></script>
-    <!-- <script src="js/jquery.stellar.min.js"></script> -->
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/circleaudioplayer.js"></script>
-
-    <script src="js/main.js"></script>
-</body>
-
+    </div>
+  </footer>
 </html>
+
+
+<!-- SCRIPTS -->
+
+<script>
+  function toggleAbout() {
+    var moreText = document.getElementById("about-more");
+    var btnText = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
+
+<script>
+  function openModal(imageSrc) {
+    // Set the image source in the modal
+    document.getElementById("modalImage").src = imageSrc;
+    // Show the modal
+    $('#imageModal').modal('show');
+  }
+</script>
+
+<!-- MAPA DE UBICACION -->
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Coordenadas ejemplo: Miami (puedes cambiarlas)
+  var map = L.map('map').setView([25.776346679481417, -80.18969948004978], 16);
+
+  // Capa base de OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Marcador de ejemplo
+  L.marker([25.776346679481417, -80.18969948004978]).addTo(map)
+    .bindPopup('227 NE 2nd St, Miami, FL 33132')
+    .openPopup();
+</script>
+<script>
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800, // Duration of animations
+    easing: 'ease-in-out', // Easing function
+    once: true // Whether animation should happen only once - while scrolling down
+  });
+</script>
+<script>
+  function toggleProperty() {
+    var moreText = document.getElementById("property-more");
+    var btnText = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/circleaudioplayer.js"></script>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
